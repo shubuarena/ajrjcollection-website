@@ -4,63 +4,137 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AJRJ Collection</title>
-<meta name="description" content="AJRJ Collection is a UK company that invests in new ideas and start-ups.">
+<meta name="description" content="AJRJ Collection is a UK company that invests in new ideas and helps turn them into start-up businesses.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#1F2A44;--muted:#5B6478;--paper:#FBF8F3;--card:#FFFFFF;--line:#E7E1D6;--accent:#E8453C;--accent2:#2F7D4F;--soft:#F3ECE1}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#F1EDE6;--muted:#B5B0A6;--paper:#16181D;--card:#1F222A;--line:#2E323C;--accent:#FF7A6E;--accent2:#6FCB93;--soft:#22252D}}
-:root[data-theme="dark"]{--ink:#F1EDE6;--muted:#B5B0A6;--paper:#16181D;--card:#1F222A;--line:#2E323C;--accent:#FF7A6E;--accent2:#6FCB93;--soft:#22252D}
+:root{--ink:#1F2A44;--muted:#5B6478;--paper:#FBF8F3;--card:#FFFFFF;--line:#E7E1D6;--accent:#C2502F;--accent2:#2F7D4F;--soft:#F3ECE1;--deep:#1F2A44;--deepink:#FBF8F3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#F1EDE6;--muted:#B5B0A6;--paper:#16181D;--card:#1F222A;--line:#2E323C;--accent:#F08A6A;--accent2:#6FCB93;--soft:#22252D;--deep:#0F1115;--deepink:#F1EDE6}}
+:root[data-theme="dark"]{--ink:#F1EDE6;--muted:#B5B0A6;--paper:#16181D;--card:#1F222A;--line:#2E323C;--accent:#F08A6A;--accent2:#6FCB93;--soft:#22252D;--deep:#0F1115;--deepink:#F1EDE6}
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 "Nunito Sans",system-ui,sans-serif}
 a{color:var(--accent)}
-.wrap{max-width:980px;margin:0 auto;padding:0 20px}
-header{border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
-.brand{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:1.35rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--paper);z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:1.3rem;letter-spacing:.02em;color:var(--ink);text-decoration:none}
 nav a{color:var(--muted);text-decoration:none;font-weight:600;margin-left:22px;font-size:.95rem}
 nav a:hover{color:var(--ink)}
-.intro{padding-top:72px;padding-bottom:48px}
-.intro h1{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:clamp(2rem,5vw,3.1rem);line-height:1.12;margin:0 0 16px;max-width:15ch}
-.intro p{color:var(--muted);font-size:1.15rem;max-width:56ch;margin:0}
-.label{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);margin:0 0 10px}
-.product{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;margin:8px 0 64px}
-.product .pic{background:var(--soft);display:flex;align-items:center;justify-content:center}
-.product .pic img{width:100%;height:100%;object-fit:cover;display:block}
-.product .txt{padding:34px 34px 30px}
-.product .logo{width:min(260px,80%);display:block;margin:0 0 16px}
-.product h2{font-family:Fraunces,Georgia,serif;font-size:1.7rem;margin:0 0 10px;line-height:1.2}
-.product p{color:var(--muted);margin:0 0 14px}
-.product ul{margin:0 0 20px;padding-left:20px;color:var(--muted)}
-.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:11px 20px;border-radius:999px}
-.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);margin-left:8px}
-section h2.sec{font-family:Fraunces,Georgia,serif;font-size:1.6rem;margin:0 0 12px}
-.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:0 0 64px}
-.box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 26px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0}
+.label{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);margin:0 0 12px}
+section.wrap{margin-top:96px}
+.hero{padding-top:88px;padding-bottom:64px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:end}
+.hero h1{font-size:clamp(2.3rem,5.4vw,3.6rem);max-width:13ch}
+.hero p{color:var(--muted);font-size:1.15rem;margin:20px 0 0;max-width:52ch}
+.hero .cta{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:999px}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.mark{aspect-ratio:1;max-width:320px;justify-self:end;width:100%;border-radius:28px;background:var(--soft);border:1px solid var(--line);position:relative;overflow:hidden}
+.mark svg{position:absolute;inset:0;width:100%;height:100%}
+.sec-h{font-size:clamp(1.7rem,3.4vw,2.3rem);max-width:22ch;margin-bottom:14px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 32px;font-size:1.08rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}
+.card h3{font-size:1.25rem;margin:10px 0 8px}
+.card p{color:var(--muted);margin:0}
+.num{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:1rem;color:var(--accent);background:var(--soft);width:38px;height:38px;border-radius:50%;display:grid;place-items:center}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.steps li{border-top:3px solid var(--accent);padding-top:16px}
+.steps b{display:block;font-family:Fraunces,Georgia,serif;font-size:1.2rem;margin-bottom:6px}
+.steps span{color:var(--muted)}
+.look{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px;margin:0;padding:0;list-style:none}
+.look li{padding-left:30px;position:relative;color:var(--muted)}
+.look li::before{content:"";position:absolute;left:0;top:.45em;width:14px;height:14px;border-radius:4px;background:var(--accent2)}
+.look li b{color:var(--ink)}
+.pitch{margin-top:72px;background:var(--deep);color:var(--deepink);border-radius:28px;padding:48px;display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center}
+.pitch h2{font-size:clamp(1.6rem,3.2vw,2.2rem)}
+.pitch p{opacity:.85;margin:12px 0 0}
+.pitch .btn{background:#F3ECE1;color:#1F2A44;justify-self:start}
+.pitch small{display:block;opacity:.7;margin-top:12px;font-size:.88rem}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding-bottom:72px}
 .box p{margin:0 0 6px;color:var(--muted)}
 .box b{color:var(--ink)}
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:.9rem}
 footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
-@media (max-width:760px){.product,.cols{grid-template-columns:1fr}.product .pic{aspect-ratio:16/9}nav a{margin-left:14px}.intro{padding-top:48px;padding-bottom:32px}.btn.ghost{margin:10px 0 0}}
+@media (max-width:860px){.hero,.pitch{grid-template-columns:1fr}.mark{display:none}.grid3{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.look{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.pitch{padding:32px 24px}nav a{margin-left:14px}nav a.hide-sm{display:none}.hero{padding-top:56px;padding-bottom:40px}section.wrap{margin-top:64px}}
 </style>
 </head>
 <body>
-<header><div class="wrap"><a class="brand" href="#">AJRJ Collection</a><nav><a href="#contact">Contact</a></nav></div></header>
+<header><div class="wrap"><a class="brand" href="#">AJRJ Collection</a><nav><a class="hide-sm" href="#what">What we do</a><a class="hide-sm" href="#how">How we work</a><a href="#contact">Contact</a></nav></div></header>
 <main>
-  <div class="wrap intro">
-    <p class="label">About us</p>
-    <h1>We invest in ideas and help them grow.</h1>
-    <p>AJRJ Collection is a UK company that invests in new ideas and helps turn them into start-up businesses. We back ideas we believe in and help them grow into lasting businesses.</p>
+  <div class="wrap hero">
+    <div>
+      <p class="label">AJRJ Collection Ltd</p>
+      <h1>We invest in ideas and help them grow.</h1>
+      <p>AJRJ Collection is a UK company that invests in new ideas and helps turn them into start-up businesses. We back the ideas we believe in and support them to become lasting businesses.</p>
+      <div class="cta"><a class="btn" href="#pitch">Share an idea</a><a class="btn ghost" href="#how">How we work</a></div>
+    </div>
+    <div class="mark" aria-hidden="true">
+      <svg viewBox="0 0 320 320"><circle cx="96" cy="230" r="34" fill="#2F7D4F" opacity=".9"/><circle cx="186" cy="168" r="52" fill="#C2502F" opacity=".9"/><circle cx="246" cy="86" r="26" fill="#E3B341"/><path d="M96 230 L186 168 L246 86" stroke="#1F2A44" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round" fill="none" opacity=".55"/></svg>
+    </div>
   </div>
+
+  <section class="wrap" id="what">
+    <p class="label">What we do</p>
+    <h2 class="sec-h">More than money: we help build the business.</h2>
+    <p class="lead">An idea needs more than funding to succeed. We work alongside founders from the first conversation to launch and beyond.</p>
+    <div class="grid3">
+      <div class="card"><span class="num">1</span><h3>Invest</h3><p>We provide early funding to get promising ideas off the ground, so founders can focus on building rather than chasing money.</p></div>
+      <div class="card"><span class="num">2</span><h3>Build</h3><p>We help shape the product, brand and plan: from naming and design to testing with real customers and getting ready to launch.</p></div>
+      <div class="card"><span class="num">3</span><h3>Grow</h3><p>After launch we stay involved, helping each business find its audience, learn from feedback and grow steadily over time.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap" id="how">
+    <p class="label">How we work</p>
+    <h2 class="sec-h">From idea to launch, one step at a time.</h2>
+    <p class="lead">We keep things simple and practical, and we test early so good ideas get stronger and weaker ones are improved quickly.</p>
+    <ol class="steps">
+      <li><b>Listen</b><span>We start with the idea, the problem it solves and the people it is for.</span></li>
+      <li><b>Test</b><span>We try a simple version with real people before spending big.</span></li>
+      <li><b>Build</b><span>We turn what works into a proper product and brand.</span></li>
+      <li><b>Launch</b><span>We bring it to market and keep improving it together.</span></li>
+    </ol>
+  </section>
+
+  <section class="wrap" id="look">
+    <p class="label">What we look for</p>
+    <h2 class="sec-h">Ideas that make everyday life better.</h2>
+    <p class="lead">We are open to ideas in many areas. These are the things that matter most to us.</p>
+    <ul class="look">
+      <li><b>A real need.</b> A clear problem that people actually have.</li>
+      <li><b>Something different.</b> A fresh approach, not a copy of what already exists.</li>
+      <li><b>Room to grow.</b> A business that can reach many people over time.</li>
+      <li><b>Done responsibly.</b> Honest, safe and respectful of customers' privacy.</li>
+      <li><b>Committed people.</b> Founders who care deeply about what they are building.</li>
+      <li><b>Built to last.</b> Long-term value, not a quick win.</li>
+    </ul>
+  </section>
+
+  <div class="wrap">
+    <div class="pitch" id="pitch">
+      <div>
+        <h2>Have an idea?</h2>
+        <p>We would love to hear from you. Send us a short email explaining your idea, who it is for and what stage you are at.</p>
+      </div>
+      <div>
+        <a class="btn" href="mailto:info@ajrjcollection.com?subject=Idea%20for%20AJRJ%20Collection">Email us your idea</a>
+        <small>Please don't send confidential details in your first email. We'll reply if it's a good fit.</small>
+      </div>
+    </div>
+  </div>
+
   <section class="wrap" id="contact">
+    <p class="label">Contact</p>
     <div class="cols">
-      <div class="box">
-        <h2 class="sec">Contact</h2>
-        <p>For enquiries about AJRJ Collection:</p>
+      <div class="card box">
+        <h3 style="margin:0 0 10px">Get in touch</h3>
+        <p>For all enquiries about AJRJ Collection:</p>
         <p><b><a href="mailto:info@ajrjcollection.com">info@ajrjcollection.com</a></b></p>
       </div>
-      <div class="box">
-        <h2 class="sec">Company details</h2>
+      <div class="card box">
+        <h3 style="margin:0 0 10px">Company details</h3>
         <p><b>AJRJ Collection Ltd</b></p>
         <p>Registered in England and Wales, company number 17338798</p>
         <p>Registered office: 66 Paul Street, London EC2A 4NA, United Kingdom</p>
@@ -68,6 +142,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
     </div>
   </section>
 </main>
-<footer><div class="wrap"><span>© 2026 AJRJ Collection Ltd.</span><span>ajrjcollection.com</span></div></footer>
+<footer><div class="wrap"><span>© 2026 AJRJ Collection Ltd. All rights reserved.</span><span>ajrjcollection.com</span></div></footer>
 </body>
 </html>
